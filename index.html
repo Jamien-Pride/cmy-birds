@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CMY Flocking Birds Background</title>
+    <title>CMY Flocking Birds - Art Series</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
+        html {
+            background: #FFFEFA;
+        }
+        
         body {
             margin: 0;
             overflow-x: hidden;
             overflow-y: auto;
-            background-color: #fff8f0;
+            background-color: #FFFEFA;
             color: #333;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             min-height: 100vh;
@@ -23,6 +27,7 @@
             width: 100%;
             height: 100%;
             z-index: 1;
+            background: #FFFEFA;
         }
         
         /* Content overlay */
@@ -536,10 +541,12 @@
             camera.position.z = 350;
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xfff8f0);
-            scene.fog = new THREE.Fog(0xfff8f0, 100, 1000);
+            scene.background = new THREE.Color(0xFFFEFA); // #FFFEFA background
+            scene.fog = new THREE.Fog(0xFFFEFA, 100, 1000); // Matching fog for depth
 
-            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer = new THREE.WebGLRenderer({ 
+                antialias: true
+            });
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
             container.appendChild(renderer.domElement);
